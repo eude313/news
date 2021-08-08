@@ -11,9 +11,7 @@ To get more help on python please visit https://www.python.org/.
 ### Behaviour Driven Development
 | Our Program should handle                       | Input example | Output example                                   |
 |:------------------------------------------------|---------------|--------------------------------------------------|
-|Hide and show description and icons when clicked | Click icons   |Icons and text appear and disappears when clicked.|
-|Hover over the images on the portfolio section to get a description of each image| Move the cuser over the images| a description of each image should apper.|
-|Enter your email address and message in the contact form| Enter your details and message|A reply should pop up to alert you that the message has been received|
+|Hide and show news and icons when clicked | button  | Text appear and disappears when clicked.|
 
 ## Known Bugs
 Want to contribute? Great!
