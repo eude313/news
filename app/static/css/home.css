@@ -9,40 +9,54 @@
     box-sizing: border-box;
 }
 .back{
-    background-image: url('/static/images/picture-1.jpg');
-    /* background: linear-gradient(
+    background: linear-gradient(
             0deg
-            ,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("/static/images/picture-1.jpg");  */
+            ,rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url("/static/images/picture-1.jpg"); 
     min-height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+.you{
+    position: relative;
+    top: -6rem;
+}
 .car{
     animation-delay:0.8s;
     font-family: 'Aclonica', sans-serif;
-    font-size: 3.5rem;
-    color: #bbb;
+    font-size: 5rem;
+    color: rgba(251, 251, 251, 0.952);
     position: relative;
-    top: 18rem;
+    top: 16rem;
+    text-shadow: 2px 2px 2px solid black;
 }
 .car-1{
     animation-delay:0.2s;
-    color: #bbb;
+    color: rgba(251, 251, 251, 0.952);
     position: relative;
-    bottom: -22.5rem;
+    bottom: -22rem;
+    text-shadow: 2px 2px 2px solid black;
 }
 hr.solid {
     border-top: 3px solid #bbb;
     position: relative;
-    top: 20rem;
+    top: 19.5rem;
 }
 .example{
     position: relative;
-    top: 2.6rem;
+    top: -12rem;
 }
 .vl {
     border-left: 3px solid #bbb;
-    height: 12vh;
+    height: 15vh;
     margin-left: 20.5px;
+}
+.story{
+    color: rgba(251, 251, 251, 0.952);
+    font-size: 4vh;
+    font-family: 'Old Standard TT', serif;
+    text-shadow: 2px 2px 2px solid black;
+}
+.btn-outline-danger{
+    border-radius: 10px;
 }
