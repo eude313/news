@@ -1,10 +1,10 @@
-from flask import Flask
-from .config import DevConfig
+from flask import Flask, app , render_template
 
-app = Flask(__name__,instance_relative_config = True)
+app = Flask(__name__)
 
-# Setting up configuration
-app.config.from_object(DevConfig)
-app.config.from_pyfile('config.py')
+@app.route('/')
+def base():
+    return render_template('base.html')
 
-from app import views
+if __name__ == '__main__':
+    app.run(debug=True)
