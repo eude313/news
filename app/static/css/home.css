@@ -21,12 +21,28 @@
 .car{
     animation-delay:0.8s;
     font-family: 'Aclonica', sans-serif;
-    font-size: 3rem;
-    text-decoration: underline;
-    color: rgba(240, 248, 255, 0.424);
+    font-size: 3.5rem;
+    color: #bbb;
+    position: relative;
+    top: 18rem;
+}
+.car-1{
+    animation-delay:0.2s;
+    color: #bbb;
+    position: relative;
+    bottom: -22.5rem;
+}
+hr.solid {
+    border-top: 3px solid #bbb;
+    position: relative;
+    top: 20rem;
+}
+.example{
+    position: relative;
+    top: 2.6rem;
 }
 .vl {
-    border-left: 3px solid rgba(240, 240, 240, 0.808);
+    border-left: 3px solid #bbb;
     height: 12vh;
     margin-left: 20.5px;
 }
