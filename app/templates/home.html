@@ -1,17 +1,30 @@
 {% extends "base.html" %}
 
-{% block css %}
-{% comment %} <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}> {% endcomment %}
-<link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}>
-
+{% block css %} 
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/home.css') }}">
 {% endblock %}
 
-{%block content %}
+{% block content %}
 
-    <div class="container-fluid back">
+    <body class="back">
 
-
-
-    </div>
+        <div class="container">
+            <div class="">
+                <h1 class="car text-center animated fadeInUp">WELCOME TO CARBON NEWS </h1>
+            </div>
+        </div>
+            
+            
+        <div class="example"> 
+            <div class="vl"></div>
+            <div><img src="https://img.icons8.com/color/48/000000/instagram-new.png" width="40px"/>
+                </div>
+            <div><img src="https://img.icons8.com/fluency/48/000000/facebook-circled.png" width="40px"/>
+                </div>
+            <div><img src="https://img.icons8.com/fluency/48/000000/youtube-play.png" width="40px"/>
+                </div>
+            <div class="vl"></div>
+        </div>
+    </body>
 
 {% endblock %}
