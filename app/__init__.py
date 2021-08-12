@@ -1,14 +1,21 @@
-from flask import Flask, app , render_template
+from flask import Flask
+from flask_bootstrap import Bootstrap
+from config import config_options
 
-app = Flask(__name__)
+bootstrap = Bootstrap()
 
-@app.route('/')
-def base():
-    return render_template('base.html')
+def create_app(config_name):
 
-@app.route("/home")
-def home():
-    return render_template("home.html")
+    app = Flask(__name__)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+    # Creating the app configurations
+    app.config.from_object(config_options[config_name])
+
+    # Initializing flask extensions
+    bootstrap.init_app(app)
+
+    # Will add the views and forms
+
+    return app
+
+
