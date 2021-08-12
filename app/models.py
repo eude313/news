@@ -1,4 +1,8 @@
 class Articles:
+    '''
+    Articles class to define news objects
+    '''
+    
     def __init__(self, publishedAt, urlToImage,title,content,author,url):
       self.publishedAt = publishedAt
       self.urlToImage= urlToImage

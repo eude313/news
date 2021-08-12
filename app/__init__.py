@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, app
 from flask_bootstrap import Bootstrap
 from config import config_options
 
@@ -17,5 +17,3 @@ def create_app(config_name):
     # Will add the views and forms
 
     return app
-
-
