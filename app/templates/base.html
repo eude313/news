@@ -13,17 +13,14 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-    {% block css %}
- 
-    {% endblock %}
-   
-  <title>News</title>
+
+    {% block css %}   {% endblock %}
+    {% block title%}  {% endblock %}
 </head>
 <body>
     <div class="container-fluid">
-        {%block title %} {% endblock %}
         {%block content %}
-        <h1 class="text-center">my love for python!</h1>
+          <h1 class="text-center">my love for python!</h1>
         {% endblock %}
         {%block footer %} {%endblock %}
     </div>

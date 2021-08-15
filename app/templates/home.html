@@ -1,5 +1,13 @@
 {% extends "base.html" %}
 
+<!-- {% block head %}
+    <title>home </title>
+{% endblock %} -->
+
+{% block title %}
+    <h1>home</h1> 
+{% endblock %}
+
 {% block css %} 
 {{ super() }}
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/home.css') }}">
@@ -28,7 +36,7 @@
                 <div class="car-1 text-center animated fadeInDown">
                     <div><p class="story">Setting the news agenda Every story, every side The whole picture Hear the human story</p></div>
                     <div><h4 class="by" style="font-family: 'MonteCarlo', cursive; color:rgb(254, 254, 255);">By<br></h4><h1 style="font-family: 'Aclonica', sans-serif;">Carbon</h></div>
-                    <div><a href="http://"><button type="button" class="btn btn-outline-danger" style="font-family: 'Old Standard TT', serif;" data-mdb-ripple-color="dark">
+                    <div><a  href="/sources"><button type="button" class="btn btn-outline-danger" style="font-family: 'Old Standard TT', serif;" data-mdb-ripple-color="dark">
                         Read more
                     </button></a> </div>
                     

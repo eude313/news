@@ -1,15 +1,113 @@
 {% extends 'base.html'%}
 
-{% block css %}
-  
-{% endblock %}
-{% block title %}
-    great html works!
-{% endblock}
+{% block css %} {% endblock %}
+{% block title %} {% endblock}
 
+{% block head %}
+    <title>Sources</title>
+{% endblock %}
 
 {%block content %}
+    
+<div class="container" id = "sources">
+    <div class="container text-center">
+        <h2>ALL NEWS</h2>
+    </div>
+    <hr>
+    <div class="row">
+        <div>
+            {% for all_news in general %}
+                <div class="card">
+                    <div class="card-body">
+                    <h5 class="card-title">{{all_news.name}}</h5>
+                    <p class="card-text">
+                        {{all_news.description | truncate(60)}}
+                    </p>
+                    <a href="/articles/{{ all_news.id}}"><button type="button" class="btn btn-primary">Button</button></a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <hr>
+        <!-- TECHNOLOGY -->
+        <div class="container text-center">
+            <h2>TECHNOLOGY</h2>
+        </div>
+        <hr>
+        <div>
+            {% for all_news in tech %}
+                <div class="card">
+                    <div class="card-body">
+                    <h5 class="card-title">{{all_news.name}}</h5>
+                    <p class="card-text">
+                        {{all_news.description | truncate(60)}}
+                    </p>
+                    <a href="/articles/{{ all_news.id}}"><button type="button" class="btn btn-primary">View {{all_news.name}} Articles </button></a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <hr>
+        <!-- Business -->
+        <div class="container text-center">
+            <h2>Business</h2>
+        </div>
+        <hr>
+        <div>
+            {% for all_news in business %}
+                <div class="card">
+                    <div class="card-body">
+                    <h5 class="card-title">{{all_news.name}}</h5>
+                    <p class="card-text">
+                        {{all_news.description | truncate(60)}}
+                    </p>
+                    <a href="/articles/{{ all_news.id}}"><button type="button" class="btn btn-primary">View {{all_news.name}} Articles</button></a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <hr>
+        <!-- Fun -->
+        <div class="container text-center">
+            <h2>>Fun</h2>
+        </div>
+        <hr>
+        <div>
+            {% for all_news in fun %}
+                <div class="card">
+                    <div class="card-body">
+                    <h5 class="card-title">{{all_news.name}}</h5>
+                    <p class="card-text">
+                        {{all_news.description | truncate(60)}}
+                    </p>
+                    <a href="/articles/{{ all_news.id}}"><button type="button" class="btn btn-primary">View {{all_news.name}} Articles</button></a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <hr>
+        <div class="container text-center">
+            <h2>Sports</h2>
+        </div>
+        <hr>
+        <div>
+            {% for all_news in sports %}
+            <div class="card">
+                <div class="card-body">
+                <h5 class="card-title">{{all_news.name}}</h5>
+                <p class="card-text">
+                    {{all_news.description | truncate(60)}}
+                </p>
+                <a href="/articles/{{ all_news.id}}"><button type="button" class="btn btn-primary">View {{all_news.name}} Articles</button></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
 
-<h1>Hello am eudes</h1>
+        
+        <hr>
+   
+    </div>
+</div>
 
 {% endblock %}

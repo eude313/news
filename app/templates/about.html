@@ -1,0 +1,32 @@
+{% comment %} {% extends 'base.html'%}
+
+{% block content%}
+    <div class="container">
+        <h2> New Articles</h2>
+        <hr>
+        <div class="row">
+
+            {% for article in news %}
+            <div class="card" style="width: 18rem;">
+                <img src="{{article.urlToImage}}"
+                class="card-img-top"
+                alt="...">
+               
+
+                <div class="card-body">
+                    <h1 class="card-title">{{article.title}}</h1>
+                    <p class = "text-muted">By:{{article.author}}</p>
+                    <h3 class="card-text">
+                    {{article.description | truncate(80)}}
+                    </h3>
+                    <a href="{{article.url}}" class="btn btn-danger">continue..</a>
+                    <p class="text">Created at: {{article.publishedAt}};</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{%endblock%}
+
+
+ {% endcomment %}
