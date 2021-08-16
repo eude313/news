@@ -21,15 +21,12 @@ def index():
 
     return render_template('index.html', title=title, sports=all_news, general=general_news, technology=tech_news, business=bis_news, entertainment=ent_news)
 
-# @main.route('/source/<int:id>')
-# def news(id):
-    
-#     news = get_news(id)
+@main.route('/news/<int:id>')
+def news(id):
+    news = get_news(id)
+    return render_template('index.html', news=news)
 
-#     return render_template('index.html', news=news)
-
-# @main.route('/about/<source_id>', methods = ['GET'])
-# def about(source_id):   
-#     # get_id = get_sources()
-#     articles = get_articles(source_id)
-#     return render_template('about.html', articles = articles)
+@main.route('/articles/<source_id>')
+def about(source_id):
+    articles = get_articles(source_id)
+    return render_template('about.html', articles = articles)

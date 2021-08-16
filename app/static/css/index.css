@@ -5,3 +5,13 @@
 /* font-family: 'MonteCarlo', cursive; {for decoration }*/
 /* font-family: 'Old Standard TT', serif;  {for notes } */
 /* font-family: 'Aclonica', sans-serif; {for headings }*/
+
+body{
+    background: linear-gradient(
+            0deg
+            ,rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url("/static/images/picture-1.jpg"); 
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

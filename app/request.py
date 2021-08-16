@@ -68,8 +68,7 @@ def get_articles(source_id):
     return articles_results
 
 def process_articles(articles_list):
-    '''
-    '''
+    
     articles_results = []
     for article_item in articles_list:
         title = article_item.get('title')

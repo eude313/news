@@ -1,112 +1,132 @@
 {% extends 'base.html' %}
 
-{% block css %} {% endblock %}
-{% block title %} 
-<!-- <title>Sources</title>  -->
+{% block css %}
+    {{ super() }}
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/index.css') }}">
 {% endblock %}
- 
+
+<body>  
+<div class="container" id= "sources"> 
 {% block content %}
-    
-<div class="container" id = "sources">
-    <div class="container text-center">
-        <h2>ALL NEWS</h2>
+    <div>
+        <h2 class="container text-center">ALL NEWS</h2>
     </div>
     <hr>
-    <div class="row">
-        <div>
-            {% for all_news in general %}
-                <div class="card">
-                    <div class="card-body">
-                    <h5 class="card-title">{{all_news.name}}</h5>
-                    <p class="card-text">
-                        {{all_news.description | truncate(60)}}
-                    </p>
-                    <a href="/articles/{{ all_news.id}}"><button type="button" class="btn btn-primary">Button</button></a>
+    <div class="col">
+        <div class="row">
+            <!-- <div> -->
+                {% for all_news in general %}
+                <div class="col-md-3 m-2">
+                    <div class="row">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">{{all_news.name}}</h5>
+                                <p class="card-text">
+                                    {{all_news.description | truncate(60)}}
+                                </p>
+                                <a href="/articles/{{ all_news.id}}"><button  type="button" class="btn btn-outline-danger" style="border-radius: 9px;" data-mdb-ripple-color="dark">View {{all_news.name}} Articles </button></a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            {% endfor %}
-        </div>
-        <hr>
-        
-        <div class="container text-center">
-            <h2>TECHNOLOGY</h2>
-        </div>
-        <hr>
-        <div>
-            {% for all_news in tech %}
-                <div class="card">
-                    <div class="card-body">
-                    <h5 class="card-title">{{all_news.name}}</h5>
-                    <p class="card-text">
-                        {{all_news.description | truncate(60)}}
-                    </p>
-                    <a href="/articles/{{ all_news.id}}"><button type="button" class="btn btn-primary">View {{all_news.name}} Articles </button></a>
+                </div>        
+                {% endfor %}
+            <!-- </div> -->
+            <hr>
+            
+            <div class="container text-center">
+                <h2>TECHNOLOGY</h2>
+            </div>
+            <hr>
+            <!-- <div> -->
+                {% for all_news in tech %}
+                <div class="col-md-3 m-2">
+                    <div class="row">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">{{all_news.name}}</h5>
+                                <p class="card-text">
+                                    {{all_news.description | truncate(60)}}
+                                </p>
+                                <a href="/articles/{{ all_news.id}}"><button type="button" style="border-radius:6px;" class="btn btn-primary">View {{all_news.name}} Articles </button></a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            {% endfor %}
-        </div>
-        <hr>
-        
-        <div class="container text-center">
-            <h2>Business</h2>
-        </div>
-        <hr>
-        <div>
-            {% for all_news in business %}
-                <div class="card">
-                    <div class="card-body">
-                    <h5 class="card-title">{{all_news.name}}</h5>
-                    <p class="card-text">
-                        {{all_news.description | truncate(60)}}
-                    </p>
-                    <a href="/articles/{{ all_news.id}}"><button type="button" class="btn btn-primary">View {{all_news.name}} Articles</button></a>
+                </div>        
+                {% endfor %}
+            <!-- </div> -->
+            <hr>
+            
+            <div class="container text-center">
+                <h2>Business</h2>
+            </div>
+            <hr>
+            <!-- <div> -->
+                {% for all_news in business %}
+                <div class="col-md-3 m-2">
+                    <div class="row">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">{{all_news.name}}</h5>
+                                <p class="card-text">
+                                    {{all_news.description | truncate(60)}}
+                                </p>
+                                <a href="/articles/{{ all_news.id}}"><button type="button"  style="border-radius:6px;" class="btn btn-primary">View {{all_news.name}} Articles</button></a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            {% endfor %}
-        </div>
-        <hr>
-        
-        <div class="container text-center">
-            <h2>>Fun</h2>
-        </div>
-        <hr>
-        <div>
-            {% for all_news in fun %}
-                <div class="card">
-                    <div class="card-body">
-                    <h5 class="card-title">{{all_news.name}}</h5>
-                    <p class="card-text">
-                        {{all_news.description | truncate(60)}}
-                    </p>
-                    <a href="/articles/{{ all_news.id}}"><button type="button" class="btn btn-primary">View {{all_news.name}} Articles</button></a>
+                </div>        
+                {% endfor %}
+            <!-- </div> -->
+            <hr>
+            
+            <div class="container text-center">
+                <h2>Fun</h2>
+            </div>
+            <hr>
+            <!-- <div> -->
+                {% for all_news in fun %}
+                <div class="col-md-3 m-2">
+                    <div class="row">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">{{all_news.name}}</h5>
+                                <p class="card-text">
+                                    {{all_news.description | truncate(60)}}
+                                </p>
+                                <a href="/articles/{{ all_news.id}}"><button type="button"  style="border-radius:6px;" class="btn btn-primary">View {{all_news.name}} Articles</button></a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            {% endfor %}
-        </div>
-        <hr>
-        <div class="container text-center">
+                </div>        
+                {% endfor %}
+            <!-- </div> -->
+            <hr>
+
+            <!-- <div class="container"> -->
+            <div class="text-center">
             <h2>Sports</h2>
-        </div>
-        <hr>
-        <div>
+            </div>
             {% for all_news in sports %}
-            <div class="card">
-                <div class="card-body">
-                <h5 class="card-title">{{all_news.name}}</h5>
-                <p class="card-text">
-                    {{all_news.description | truncate(60)}}
-                </p>
-                <a href="/articles/{{ all_news.id}}"><button type="button" class="btn btn-primary">View {{all_news.name}} Articles</button></a>
+            <div class="col-md-3 m-2">
+                <div class="row">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{all_news.name}}</h5>
+                            <p class="card-text">
+                            {{all_news.description | truncate(60)}}
+                            </p>
+                            <a href="/articles/{{ all_news.id}}"><button type="button"  style="border-radius:6px;" class="btn btn-primary">View {{all_news.name}} Articles</button></a>
+                        </div>
+                    </div>
                 </div>
             </div>
             {% endfor %}
+            <!-- </div>   -->
+            <hr>
+    
         </div>
-
-        
-        <hr>
-   
     </div>
-</div>
-
 {% endblock %} 
+</div>
+</body>
 
