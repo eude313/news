@@ -13,7 +13,7 @@ def create_app(config_name):
 
     #Setting up configuration
     from .request import configure_request
-    # configure_request(app)
+    configure_request(app)
 
 
     return app
