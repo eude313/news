@@ -9,7 +9,7 @@
 {% block content %}
     <body>
         <div class="container">
-            <h2> New Articles</h2>
+            <h2 style="font-family: 'Aclonica', sans-serif; "> New Articles</h2>
             <hr>
             <div class="row">
                 {% for article in articles %}
@@ -17,13 +17,13 @@
                     <img src="{{ article.title }}" class="card-img-top"
                     alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">{{ article.urlToImage }}</h5>
+                        <h5 class="card-title ">{{ article.urlToImage }}</h5>
                         <p class = "text-muted">By:{{ article.author}}</p>
                         <h3 class="card-text">
                         {{ article.description | truncate(80) }}
                         </h3>
                         <p class="text">Created at: {{ article.publishedAt }};</p>
-                        <a href="{{article.url}}" class="btn btn-danger">continue..</a>
+                        <a href="{{article.url}}" class="btn btn-outline-danger" data-mdb-ripple-color="dark">continue..</a>
                         
                     </div>
                 </div>

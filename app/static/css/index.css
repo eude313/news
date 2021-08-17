@@ -19,13 +19,16 @@ body{
 .mol{
     background-color: #7799bbbe;
 }
+.tic{
+   font-family: 'Old Standard TT', serif; 
+}
 .all{
     font-family: 'Aclonica', sans-serif;  
 }
 
 .card-title{
-    font-family: 'Old Standard TT', serif;
     
+    font-family: 'Aclonica', sans-serif; 
 }
 .btn{
     font-family: 'Old Standard TT', serif;
