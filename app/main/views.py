@@ -9,7 +9,6 @@ def home():
  
 @main.route('/sources')
 def index():
-    
     title = "Home|newsrun"
     all_news = get_news()
     general_news = get_news()

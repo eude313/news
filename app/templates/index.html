@@ -6,13 +6,13 @@
 {% endblock %}
 
 <body>  
-<div class="container" id= "sources"> 
+<div class="container-fluid" id= "sources"> 
 {% block content %}
-    <div>
-        <h2 class="container text-center">ALL NEWS</h2>
+    <div style="margin-right: 15rem;">
+        <h2 class="text-center all">ALL NEWS</h2>
     </div>
-    <hr>
-    <div class="col">
+    <hr style="width: 79%; height: 10px; color: black; box-shadow: 5px solid black;">
+    <div class="col container">
         <div class="row">
             <!-- <div> -->
                 {% for all_news in general %}
@@ -34,7 +34,7 @@
             <hr>
             
             <div class="container text-center">
-                <h2>TECHNOLOGY</h2>
+                <h2 class=" all">TECHNOLOGY</h2>
             </div>
             <hr>
             <!-- <div> -->
@@ -47,7 +47,7 @@
                                 <p class="card-text">
                                     {{all_news.description | truncate(60)}}
                                 </p>
-                                <a href="/articles/{{ all_news.id}}"><button type="button" style="border-radius:6px;" class="btn btn-primary">View {{all_news.name}} Articles </button></a>
+                                <a href="/articles/{{ all_news.id}}"><button  type="button" class="btn btn-outline-danger" style="border-radius: 9px;" data-mdb-ripple-color="dark">View {{all_news.name}} Articles </button></a>
                             </div>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
             <hr>
             
             <div class="container text-center">
-                <h2>Business</h2>
+                <h2 class=" all">Business</h2>
             </div>
             <hr>
             <!-- <div> -->
@@ -70,7 +70,7 @@
                                 <p class="card-text">
                                     {{all_news.description | truncate(60)}}
                                 </p>
-                                <a href="/articles/{{ all_news.id}}"><button type="button"  style="border-radius:6px;" class="btn btn-primary">View {{all_news.name}} Articles</button></a>
+                                <a href="/articles/{{ all_news.id}}"><button  type="button" class="btn btn-outline-danger" style="border-radius: 9px;" data-mdb-ripple-color="dark">View {{all_news.name}} Articles </button></a>
                             </div>
                         </div>
                     </div>
@@ -80,7 +80,7 @@
             <hr>
             
             <div class="container text-center">
-                <h2>Fun</h2>
+                <h2 class=" all">Fun</h2>
             </div>
             <hr>
             <!-- <div> -->
@@ -93,7 +93,7 @@
                                 <p class="card-text">
                                     {{all_news.description | truncate(60)}}
                                 </p>
-                                <a href="/articles/{{ all_news.id}}"><button type="button"  style="border-radius:6px;" class="btn btn-primary">View {{all_news.name}} Articles</button></a>
+                                <a href="/articles/{{ all_news.id}}"><button  type="button" class="btn btn-outline-danger" style="border-radius: 9px;" data-mdb-ripple-color="dark">View {{all_news.name}} Articles </button></a>
                             </div>
                         </div>
                     </div>
@@ -103,9 +103,7 @@
             <hr>
 
             <!-- <div class="container"> -->
-            <div class="text-center">
-            <h2>Sports</h2>
-            </div>
+            
             {% for all_news in sports %}
             <div class="col-md-3 m-2">
                 <div class="row">
@@ -115,13 +113,16 @@
                             <p class="card-text">
                             {{all_news.description | truncate(60)}}
                             </p>
-                            <a href="/articles/{{ all_news.id}}"><button type="button"  style="border-radius:6px;" class="btn btn-primary">View {{all_news.name}} Articles</button></a>
+                            <a href="/articles/{{ all_news.id}}"><button  type="button" class="btn btn-outline-danger" style="border-radius: 9px;" data-mdb-ripple-color="dark">View {{all_news.name}} Articles </button></a>
                         </div>
                     </div>
                 </div>
             </div>
             {% endfor %}
             <!-- </div>   -->
+            <div class="container ">
+                <h2 class="text-center all">Sports</h2>
+            </div>
             <hr>
     
         </div>

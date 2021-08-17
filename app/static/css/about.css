@@ -12,22 +12,6 @@
     box-sizing: border-box; 
 }
 body{
-   margin-left: 15vw;
-   text-shadow: 2px 2px 2px solid black;
-   background-color: #7799bb4f;
-}
-.mol{
-    background-color: #7799bbbe;
-}
-.all{
-    font-family: 'Aclonica', sans-serif;  
-}
-
-.card-title{
-    font-family: 'Old Standard TT', serif;
-    
-}
-.btn{
-    font-family: 'Old Standard TT', serif;
-   
-}
+    text-shadow: 2px 2px 2px solid black;
+    background-color: #7799bb4f;
+ }

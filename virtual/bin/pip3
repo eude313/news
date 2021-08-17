@@ -1,4 +1,4 @@
-#!/home/moringaschool/news/virtual/bin/python
+#!/home/moringaschool/news/virtual/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
