@@ -24,8 +24,9 @@ To fix a bug or enhance an existing module, follow these steps:
 - Push to the branch (`git push origin improve-feature`)
 - Create a Pull Request
 ## Technologies Used
-- python
+- python3
 - pthon-shell
+- heroku & heroku cli
 - get and post methods
 - VSCode, Sublime Text, Brackets any Text Editor
 
