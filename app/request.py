@@ -50,9 +50,6 @@ def process_results(news_list):
 
 
 def get_articles(source_id):
-    '''
-    get articles based on article source id
-    '''
     get_article_url = articles_url.format(source_id, api_key)
 
     with urllib.request.urlopen(get_article_url) as url:

@@ -28,4 +28,4 @@ def news(id):
 @main.route('/articles/<source_id>')
 def about(source_id):
     articles = get_articles(source_id)
-    return render_template('about.html', articles = articles)
+    return render_template('about.html',  articles = articles)
